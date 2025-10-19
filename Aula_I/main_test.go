@@ -2,7 +2,7 @@ package main
 
 import "testing"
 
-func Test_milesToKm(t *testing.T) {
+func Test_milesConvertToKM(t *testing.T) {
 	type args struct {
 		m float32
 	}
@@ -17,8 +17,8 @@ func Test_milesToKm(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := milesToKm(tt.args.m); got != tt.want {
-				t.Errorf("milesToKm() = %v, want %v", got, tt.want)
+			if got := milesConvertToKM(tt.args.m); got != tt.want {
+				t.Errorf("milesConvertToKM() = %v, want %v", got, tt.want)
 			}
 		})
 	}

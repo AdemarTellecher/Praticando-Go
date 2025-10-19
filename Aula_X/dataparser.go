@@ -9,9 +9,9 @@ import (
 )
 
 type Product struct {
-	Name     string
-	Category string
-	Desc     string
+	Name        string
+	Category    string
+	Description string
 }
 
 func Read(filename string) (*os.File, error) {
@@ -37,9 +37,9 @@ func File(f *os.File) (Product, error) {
 		case 1:
 			p.Category = lines.Text()
 		case 2:
-			p.Desc = lines.Text()
+			p.Description = lines.Text()
 		default:
-			p.Desc = fmt.Sprintf("%s\n%s", p.Desc, lines.Text())
+			p.Description = fmt.Sprintf("%s\n%s", p.Description, lines.Text())
 		}
 		row++
 	}
